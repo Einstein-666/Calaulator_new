@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <!-- 结果显示框 -->
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:cursorVisible="false"
+            android:gravity="right|center_vertical"
+            android:enabled="true"
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:inputType="none"
+            android:textSize="30sp"
+            android:textIsSelectable="true"/>
+
+        <!-- 接下去采TableRow的格式进行布局设计 -->
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="7"
+            android:columnCount="6">
+
+            <TextView
+                android:id="@+id/M"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" Mem : " />
+
+            <TextView
+                android:id="@+id/mem"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="5"
+                android:gravity="left"
+                android:text=" 0" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:progressDrawable="@drawable/bar"
+                android:layout_marginBottom="5dp"
+                android:layout_height="6dp" android:layout_columnSpan="6"
+                android:min="1"
+                android:max="10"/>
+
+            <TextView
+                android:id="@+id/_drg"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/func_btn_style"
+                android:text="DEG" />
+
+            <Button
+                android:id="@+id/drg"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:textSize="18sp"
+                android:textColor="#888"
+                android:text="DRG" />
+
+            <Button
+                android:id="@+id/mc"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#888"
+                android:textSize="18sp"
+                android:text="MC" />
+
+            <Button
+                android:id="@+id/c"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#00b5e2"
+                android:textSize="18sp"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/sin"
+                android:layout_height="wrap_content"
+                android:text="sin"
+                android:background="@drawable/func_btn_style"
+                android:textSize="18sp"
+                android:textColor="#888"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/cos"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/func_btn_style"
+                android:textSize="18sp"
+                android:textColor="#888"
+                android:text="cos" />
+
+            <Button
+                android:id="@+id/tan"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="#888"
+                android:background="@drawable/func_btn_style"
+                android:text="tan" />
+
+            <Button
+                android:id="@+id/factorial"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="#888"
+                android:background="@drawable/func_btn_style"
+                android:text="n!" />
+
+            <Button
+                android:id="@+id/bksp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_columnSpan="2"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#00b5e2"
+                android:textSize="18sp"
+                android:text="◁" />
+
+            <Button
+                android:id="@+id/one"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:textSize="18sp"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:textSize="18sp"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:textSize="18sp"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/divide"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#00b5e2"
+                android:textSize="18sp"
+                android:text="÷" />
+
+            <Button
+                android:id="@+id/left"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:text="("
+                android:textColor="#888"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/right"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:text=")"
+                android:textColor="#888"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/four"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="4"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/five"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="5"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/six"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="6"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/mul"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#00b5e2"
+                android:text="×"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/sqrt"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:text="√"
+                android:textColor="#888"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/square"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:text="^"
+                android:textColor="#888"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="7"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="8"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="9"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/sub"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#00b5e2"
+                android:text="-"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/log"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/func_btn_style"
+                android:text="log"
+                android:textColor="#888"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/ln"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/func_btn_style"
+                android:text="ln"
+                android:textColor="#888"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/dot"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="."
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="0"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bd"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/buttonstyle"
+                    android:text="D"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent" />
+
+                <Button
+                    android:id="@+id/db"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/buttonstyle"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:text="B" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add"
+                android:layout_height="wrap_content"
+                android:background="@drawable/func_btn_style"
+                android:textColor="#00b5e2"
+                android:text="+"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/equal"
+                android:layout_height="wrap_content"
+                android:background="@drawable/equals_button_style"
+                android:textColor="#ffffff"
+                android:layout_columnSpan="2"
+                android:text="="
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/T"
+                android:layout_height="wrap_content"
+                android:text="提示 : "
+                android:layout_columnSpan="6"/>
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_height="wrap_content"
+                android:text="欢迎使用！"
+                android:layout_columnSpan="6"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
